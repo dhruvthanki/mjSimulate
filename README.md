@@ -10,3 +10,14 @@
     pip show mujoco
     ```
 - Update xml path in main.cc
+- Build project using:
+    ```
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ```
+- Run executable generated in build using:
+    ```
+    ./mjSim
+    ```

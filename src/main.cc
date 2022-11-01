@@ -521,11 +521,13 @@ int main(int argc, const char** argv) {
     mju_error("could not initialize GLFW");
   }
 
-  const char* filename = "/home/dhruv/Documents/GitHub/ar_llapi_cmake/model/digit-v3.xml";
-  // const char* filename = nullptr;
-  // if (argc >  1) {
-  //   filename = argv[1];
-  // }
+  const char* filename = nullptr;
+  if (argc >  1) {
+    filename = argv[1];
+  }
+  else{
+    const char* filename = "/home/dhruv/Documents/GitHub/ar_llapi_cmake/model/digit-v3.xml";
+  }
 
   // start physics thread
   std::thread physicsthreadhandle = std::thread(&PhysicsThread, sim.get(), filename);
